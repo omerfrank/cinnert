@@ -1,0 +1,19 @@
+
+$TTL    3600
+;
+; /var/named/named.rev - Network 192.168.10.0
+;
+@       IN      SOA     std214.atuda.local. adi.kinneret.co.il. (
+                                2024112403 ; srial
+                                10800      ; refresh: once per day
+                                3600       ; retry: 1h
+                                1814400    ; expire 3 weeks
+                                86400   )  ; minimum 24h
+;
+        IN      NS      std214.atuda.local.
+;
+;    atuda
+;
+1       IN      PTR     vm1.atuda.local.
+214     IN      PTR     std214.atuda.local.
+254     IN      PTR     firewall.atuda.local.

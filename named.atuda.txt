@@ -1,0 +1,33 @@
+
+$TTL    3600
+;
+; atuda.local. - atuda technologit kinneret
+;
+@       IN      SOA     std214.atuda.local. adi.kinneret.co.il. (
+                                2022120445      ; serial
+                                288000           ; refresh: every 8 hours
+                                7200            ; retry: 2h
+                                604800          ; expire 1 week
+                                14400      )    ; minimum 4h
+;
+; name servers
+;
+        IN      NS      std214.atuda.local.
+;
+; MX Records
+;
+        IN      MX      10      std214.atuda.local.
+;
+; set the domain to answer calls
+;
+        IN      A       192.168.11.238
+        IN      TXT     "v=spf1 ip4:192.168.10.0/23 ~al:l"
+;
+; loopback address
+;
+localhost       IN      A       127.0.0.1
+;
+vm1             IN      A       192.168.10.12
+firewall        IN      A       192.168.10.254
+std214      IN      A       192.168.11.238
+server          IN      CNAME   std214.atuda.local.
